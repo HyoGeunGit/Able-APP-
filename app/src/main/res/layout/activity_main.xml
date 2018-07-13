@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="kr.co.highton.slacks.sim.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#fddddd"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <ImageView
+                android:layout_marginEnd="5dp"
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:src="@drawable/avatar"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:id="@+id/toolbar_tv"
+                android:textSize="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Able"
+                android:textColor="#5e5353" />
+            <ImageView
+                android:id="@+id/logosa"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="210dp"
+                android:src="@drawable/baseline_menu_black_18dp"
+                tools:ignore="ContentDescription" />
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@android:color/white"
+            app:tabIndicatorColor="#fb176e"
+            app:tabSelectedTextColor="#ff1ea1"
+            app:tabTextColor="@color/colorSecondaryText" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>
